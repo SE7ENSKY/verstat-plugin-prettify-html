@@ -1,0 +1,7 @@
+{
+  "name": "verstat-plugin-prettify-html",
+  "version": "1.0.0",
+  "dependencies": {
+    "html": "0.0.7"
+  }
+}
