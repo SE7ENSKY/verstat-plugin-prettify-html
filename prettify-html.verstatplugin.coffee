@@ -1,4 +1,7 @@
-html = require 'html'
+prettify = require('js-beautify').html
+opts =
+	indent_char: "\t"
+	indent_size: 1
 
 module.exports = (next) ->
 	@postprocessor 'prettify-html',
@@ -6,9 +9,9 @@ module.exports = (next) ->
 		priority: 10000
 		postprocess: (file, done) =>
 			if file.process and file.processor isnt null
-				file.processed = html.prettyPrint file.processed, indent_size: 2
+				file.processed = prettify file.processed, opts
 			else
-				file.source = html.prettyPrint file.source, indent_size: 2
+				file.source = prettify file.source, opts
 			@modified file
 			done()
 
