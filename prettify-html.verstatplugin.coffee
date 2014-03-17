@@ -9,7 +9,7 @@ module.exports = (next) ->
 		priority: 10000
 		postprocess: (file, done) =>
 			if not file.hasOwnProperty("prettify-html") or (file.hasOwnProperty("prettify-html") and file["prettify-html"])
-				if file.process and file.processor isnt null
+				if file.processor isnt null
 					file.processed = prettify file.processed, opts
 				else
 					file.source = prettify file.source, opts
