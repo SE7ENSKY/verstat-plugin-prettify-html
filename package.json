@@ -1,7 +1,7 @@
 {
   "name": "verstat-plugin-prettify-html",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "dependencies": {
-    "js-beautify": "~1.4.2"
+    "js-beautify": "^1.5.1"
   }
 }
